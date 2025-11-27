@@ -97,4 +97,152 @@ fn main(){
     Rect::print_something();
     println!("{}",r.perimeter());
 }
+
+//how to import use rect::Rect; make evry thing pub to other files can access
+//pub mod rect
+
+//enums
+//define type by enumerating its possible variants 
+//means wo sab mae se koi value ho ga let see
+enum Direction{
+    North,
+    South,
+    East,
+    West
+}
+//pseudo code
+fn main(){
+    let direction:Direction=Direction::North;
+    steer(dir:direction);
+}
+fn steer(dir:Direction){
+    if(dir==Direction::North){
+        println!("you are moving to north");
+    }
+}
+    //explain and use after some time 
+
+//pattern matching
+
+enum Direction {
+    North,
+    East,
+    West,
+    South,
+}
+
+fn steer(dir: Direction) {
+    match dir {
+        Direction::North => println!("north direction"),
+        Direction::East => println!("east direction"),
+        _ => println!("some other direction just runnnn"),   // DEFAULT
+    }
+}
+
+fn main() {
+    let direction = Direction::West;
+    steer(direction);
+}
+
+
+| Symbol | Meaning                               | Example                            |
+| ------ | ------------------------------------- | ---------------------------------- |
+| `:`    | describes the **type**                | `x: i32`, `dir: Direction`         |
+| `::`   | accesses a **member inside the type** | `Direction::North`, `String::from` |
+
+
+//enums with value
+
+enum Shape{
+    Square(f32),//means square has one same sides so we put enum with value
+    Circle(f32),
+    Rectangle(f32,f32)
+}
+fn main(){
+    let s:Shape=Shape::Square(10.0);
+    let c:Shape=Shape::Circle(10.0);
+    let r:Shape=Shape::Rectangle(10.0,20.0);
+    println!("area is => {}",area_find(&s));
+    println!("perimeter is => {}",perimeter_find(&s));
+    println!("area is => {}",area_find(&c));
+    println!("perimeter is => {}",perimeter_find(&c));
+    println!("area is => {}",area_find(&r));
+    println!("perimeter is => {}",perimeter_find(&r));
+}
+//writre a function that takes shape as an input and prints its area 
+//write one its print its perimeter as well
+fn area_find(x:&Shape) -> f32{
+    match x{
+        Shape::Circle(r) =>3.14*r,
+        Shape::Rectangle(w,h)=>w*h,
+        Shape::Square(s)=>s*s,
+    }
+}
+fn perimeter_find(x:&Shape) ->f32{
+    match x{
+        Shape::Circle(r)=>2.0*3.14*r,
+        Shape::Rectangle(w,h)=>2.0*(w+h),
+        Shape::Square(s)=>4.0*s,
+    }
+}
+//remember Left side of => must be a pattern, not a value.Right side of => must be code, not a value requiring f32
+//in this code we lean about mix of borrowing and enum with values
+if ; not use then by default it think that the value you want to return....
+we can also use impl shape and inside that we can use are (&self).....
+
+//error Handling 
+//in js we usee try catch but rust see below
+
+enum Result{
+    Ok(String),
+    Err(String),
+}
+
+    enum Result<T, E> {
+    Ok(T),
+    Err(E),
+}
+//but generally it not look like this it look like this 
+enum Result<T,E>{ //uses generics study after some time
+    Ok(T),
+    Err(E),
+}
+fn main(){
+    let contents : 
+    match contents{
+        ok(contents)=>
+        Err(e)=>
+    }
+}
+    //reading file we use library use std::fs
+
+//option enum use to prevent nullability which is millio dollar mistake rust dont have null
+//rust uses option enum 
+//if nothing found in that content or function it return option that is  Option<u32>
+enum Option{
+    Some(u32),
+    None
+}// actually rust have generics enum
+pub enum Option<T> {
+    None,
+    Some(T),
+}
+
+// work through the example
+fn find_first_a(s: String) -> Option<i32> {
+    for (index, character) in s.chars().enumerate() {
+        if character == 'a' {
+            return Some(index as i32);
+        }
+    }
+    return None;
+}
+
+fn main() {
+    let my_string = String::from("raman");
+    match find_first_a(my_string) {
+        Some(index) => println!("The letter 'a' is found at index: {}", index),
+        None => println!("The letter 'a' is not found in the string."),
+    }
+}
 */

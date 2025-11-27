@@ -76,7 +76,6 @@ fn main(){
     prevent double free error and dangel free error 
     //we can use clone() also to prevent this   
     // so at last one owner at a time when owner goes out of scope the value will dropped .
-*/
 fn main(){
     let name:String=String::from("ADITYA");//we can use &str
     let len=get_len(name);
@@ -86,6 +85,7 @@ fn main(){
 fn get_len(s:String) -> usize{
     return s.len();
 }
+*/
 //actually yaha pe owner kon hai s naki name kyu ki owner ship hum log de diye line 82 pe
 // aur agar kar an he hai tho borrowing sikho fir aao meet in next class 11/27/2025.
 //trust for rust in youtube video serde
