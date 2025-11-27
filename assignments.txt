@@ -1,0 +1,55 @@
+Top 10 Rust Projects (Level-Wise + Different Domains)
+LEVEL 1 — Beginner (Basics + CLI + File I/O)
+1️⃣ File Organizer (CLI Tool)
+
+Domain: System Tools
+Learn: CLI, file handling, paths, Rust basics.
+
+2️⃣ Todo App with Local Storage
+
+Domain: Productivity
+Learn: JSON, structs, enums, file I/O.
+
+LEVEL 2 — Beginner → Intermediate (Games + Logic)
+3️⃣ Snake Game (Terminal or Bevy)
+
+Domain: Game Dev
+Learn: Game loop, input, rendering.
+
+4️⃣ Tetris or Flappy Bird Clone
+
+Domain: Game Dev
+Learn: State machines, event handling.
+
+LEVEL 3 — Intermediate (Backend + Web)
+5️⃣ REST API (Notes App Backend)
+
+Domain: Web Backend
+Learn: Axum/Actix, routing, database, models.
+
+6️⃣ URL Shortener Service
+
+Domain: Web + Databases
+Learn: Hashing, routing, persistence.
+
+LEVEL 4 — Intermediate → Advanced (Networking + Real-Time)
+7️⃣ Real-Time Chat Server (WebSockets)
+
+Domain: Networking
+Learn: TCP, async Rust, concurrency.
+
+8️⃣ Custom Shell (like Bash)
+
+Domain: Systems Programming
+Learn: Parsing, subprocess management.
+
+LEVEL 5 — Advanced (Blockchain + Desktop Apps)
+9️⃣ Build a Simple Blockchain (Rust Only)
+
+Domain: Blockchain
+Learn: Hashing, blocks, PoW, serialization.
+
+🔟 Desktop App using Tauri (Notes/Passwords App)
+
+Domain: Desktop + Full Stack
+Learn: Rust backend + UI + structured app development.
