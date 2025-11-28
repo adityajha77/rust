@@ -53,3 +53,4 @@ Learn: Hashing, blocks, PoW, serialization.
 
 Domain: Desktop + Full Stack
 Learn: Rust backend + UI + structured app development.
+desktop docable app in rust (use case .computer use training  data)
